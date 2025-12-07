@@ -6848,7 +6848,7 @@
     <section id="hero">
         <div class="hero-content">
             <p class="hero-subtitle">Welcome to Luminara</p>
-            <h1 class="hero-title">Where Moments<br>Become <span>Memories</span></h1>
+            <h1 class="hero-title">Luminate<br>With<span> LUMINARA</span></h1>
             <p class="hero-description">We craft immersive experiences that transcend the ordinary. From intimate gatherings to grand celebrations, every event is a masterpiece waiting to unfold.</p>
             <div class="hero-buttons">
                 <a href="#register" class="btn-primary">Join Our Next Event</a>
@@ -7982,15 +7982,15 @@
                 <div class="footer-column">
                     <h4>Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:hello@luminara.events">hello@luminara.events</a></li>
-                        <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+                        <li><a href="mailto:luminara.csn@gmail.com">luminara.csn@gmail.com</a></li>
+                        <li><a href="tel:+917972913127">+91 7972913127</a></li>
                         <li><a href="#">Event Inquiries</a></li>
                         <li><a href="#">Partnerships</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>2024 Luminara. All rights reserved.</p>
+                <p><span id="year">Year</span> Luminara. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -9216,12 +9216,19 @@ window.addEventListener('resize', () => {
         });
     }
 
+   const year = document.getElementById("year");
+year.innerHTML = new Date().getFullYear();
+
+
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initForm);
     } else {
         initForm();
     }
+
+
+
 </script>
 
 </body>
