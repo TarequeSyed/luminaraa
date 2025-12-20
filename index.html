@@ -8123,6 +8123,22 @@ footer {
     }
 }
 
+.testimonial-author {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.author-name {
+    font-weight: 600;
+    display: block;
+}
+
+.author-title {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+
         
     </style>
 </head>
@@ -8953,7 +8969,7 @@ footer {
                 <div class="testimonial-slide">
                     <p class="testimonial-quote">Luminara created an experience I will never forget. The attention to detail, the warm atmosphere, and the genuine connections I made that evening were truly magical. This is what events should be.</p>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200" alt="Guest" class="author-image">
+                        
                         <span class="author-name">Priya Sharma</span>
                         <span class="author-title">Mehfil Attendee</span>
                     </div>
@@ -9800,47 +9816,54 @@ if (document.readyState === 'loading') {
     // TESTIMONIAL NAVIGATION
     // ============================================
     const testimonials = [
-        {
-            quote: "Luminara created an experience I will never forget. The attention to detail, the warm atmosphere, and the genuine connections I made that evening were truly magical. This is what events should be.",
-            name: "Priya Sharma",
-            title: "Mehfil Attendee",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"
-        },
-        {
-            quote: "As a performer at the open mic, I felt completely supported and celebrated. The stage lighting, the audience energy, everything was perfect. Luminara knows how to create magic.",
-            name: "Arjun Patel",
-            title: "Open Mic Performer",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
-        },
-        {
-            quote: "The Daydream Bookmark Bar was my favorite corner. I discovered three new favorite books and made friends who share my love for literature. Cannot wait for the next event.",
-            name: "Sneha Reddy",
-            title: "Book Enthusiast",
-            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200"
-        }
-    ];
+    {
+        quote: "Luminara creates an environment where participants feel heard and valued. The coordination was smooth, the content was relevant, and the overall experience was both informative and inspiring.",
+        name: "Participant",
+        title: "Event Attendee",
+        name: "Aditya Raj"
+    },
+    {
+        quote: "What stood out most about Luminara was the attention to detail and the supportive atmosphere. As a participant, I never felt lost or ignored. It was a well-managed and memorable experience.",
+        name: "Participant",
+        title: "Event Attendee",
+        name: "Purva Jain"
+    },
+    {
+        quote: "Being a participant at Luminara was a truly refreshing experience. The team was welcoming, well-organized, and always ready to help. Every session felt meaningful and engaging, making the entire journey enjoyable and enriching.",
+        name: "Participant",
+        title: "Event Attendee",
+        name: "Fareha Shaz"
+    },
+    {
+        quote: "Luminara delivered exactly what it promised—quality, clarity, and a welcoming environment. It was an enriching experience that I would definitely recommend to others.",
+        name: "Participant",
+        title: "Event Attendee",
+        name: "Swaraj Mane"
+    }
+];
+
 
     let currentTestimonial = 0;
     const testimonialSlide = document.querySelector('.testimonial-slide');
 
     function updateTestimonial(index) {
-        const t = testimonials[index];
-        testimonialSlide.style.opacity = '0';
-        testimonialSlide.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-            testimonialSlide.innerHTML = `
-                <p class="testimonial-quote">${t.quote}</p>
-                <div class="testimonial-author">
-                    <img src="${t.image}" alt="${t.name}" class="author-image">
-                    <span class="author-name">${t.name}</span>
-                    <span class="author-title">${t.title}</span>
-                </div>
-            `;
-            testimonialSlide.style.opacity = '1';
-            testimonialSlide.style.transform = 'translateY(0)';
-        }, 300);
-    }
+    const t = testimonials[index];
+    testimonialSlide.style.opacity = '0';
+    testimonialSlide.style.transform = 'translateY(20px)';
+    
+    setTimeout(() => {
+        testimonialSlide.innerHTML = `
+            <p class="testimonial-quote">${t.quote}</p>
+            <div class="testimonial-author">
+                <span class="author-name">${t.name}</span>
+                <span class="author-title">${t.title}</span>
+            </div>
+        `;
+        testimonialSlide.style.opacity = '1';
+        testimonialSlide.style.transform = 'translateY(0)';
+    }, 300);
+}
+
 
     document.querySelector('.next-btn').addEventListener('click', () => {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
